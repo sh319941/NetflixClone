@@ -55,10 +55,7 @@ function Banner() {
           <React.Fragment>
         <ModalVideo
         channel="youtube"
-        youtube={{
-            autoplay: 1,
-            mute:1
-          }}
+        allow="autoplay"
         isOpen={isOpen}
         videoId={UrlID.key}
         onClose={() => setIsOpen(false)}
