@@ -1,0 +1,86 @@
+.row{
+    margin-top: 20px;
+    margin-left: 20px;
+    color: #fff;
+}
+
+.posters{
+    display: flex;
+    padding: 20px;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    overflow-y:hidden ;
+
+}
+
+.posters::-webkit-scrollbar {
+  width: 06px;
+  height: 05px;
+}
+
+.posters::-webkit-scrollbar-thumb {
+  background: rgba(90, 90, 90);
+}
+
+.posters::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+.poster{
+    max-height: 180px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.smallposter
+{
+    max-height: 100px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.poster:hover
+{
+  transform: scale(1.50);
+}
+.smallposter:hover
+{
+  transform: scale(1.50);
+}
+
+/* Popup style */
+.popup-box {
+  position: fixed;
+  background: #00000050;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.box {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+  height: auto;
+  max-height: 70vh;
+  margin-top: calc(100vh - 85vh - 20px);
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  border: 1px solid #999;
+  overflow: auto;
+}
+
+.close-icon {
+  content: 'x';
+  cursor: pointer;
+  position: fixed;
+  right: calc(15% - 30px);
+  top: calc(100vh - 85vh - 33px);
+  background: #ededed;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid #999;
+  font-size: 20px;
+}
