@@ -1,0 +1,22 @@
+name: Automated Synthetic Restart Test
+
+on:
+  repository_dispatch:
+    types: [synthetic_down] # Matches event_type sent by New Relic
+
+jobs:
+  restart_service:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log Trigger Information
+        run: |
+          echo "Triggered by New Relic Alert!"
+          echo "Monitor Name: ${{ github.event.client_payload.monitor_name }}"
+          echo "Issue State: ${{ github.event.client_payload.state }}"
+          echo "Issue URL: ${{ github.event.client_payload.issue_url }}"
+
+      - name: Simulate Restart Script
+        run: |
+          echo "Executing restart procedures..."
+          # Replace this echo statement with your actual restart commands or scripts
+          echo "Service restarted successfully."
